@@ -10,20 +10,58 @@
 		FC69DEC828C42CE300BD0334 /* XPCExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69DEC728C42CE300BD0334 /* XPCExampleApp.swift */; };
 		FC69DECA28C42CE300BD0334 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69DEC928C42CE300BD0334 /* ContentView.swift */; };
 		FC69DECC28C42CE400BD0334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC69DECB28C42CE400BD0334 /* Assets.xcassets */; };
-		FC69DECF28C42CE400BD0334 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC69DECE28C42CE400BD0334 /* Preview Assets.xcassets */; };
+		FC69DEE128C42DFC00BD0334 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69DEE028C42DFC00BD0334 /* main.swift */; };
+		FC69DEE528C42DFC00BD0334 /* ExampleService.xpc in Embed XPC Services */ = {isa = PBXBuildFile; fileRef = FC69DEDA28C42DFB00BD0334 /* ExampleService.xpc */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FC69DEEA28C42F0B00BD0334 /* ExampleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69DEDC28C42DFB00BD0334 /* ExampleServiceProtocol.swift */; };
+		FC69DEEB28C42F4500BD0334 /* ExampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69DEDD28C42DFC00BD0334 /* ExampleService.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC69DEE328C42DFC00BD0334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC69DEBC28C42CE300BD0334 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC69DED928C42DFB00BD0334;
+			remoteInfo = ExampleService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC69DEE928C42DFC00BD0334 /* Embed XPC Services */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/XPCServices";
+			dstSubfolderSpec = 16;
+			files = (
+				FC69DEE528C42DFC00BD0334 /* ExampleService.xpc in Embed XPC Services */,
+			);
+			name = "Embed XPC Services";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FC69DEC428C42CE300BD0334 /* XPCExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XPCExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC69DEC728C42CE300BD0334 /* XPCExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XPCExampleApp.swift; sourceTree = "<group>"; };
 		FC69DEC928C42CE300BD0334 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC69DECB28C42CE400BD0334 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FC69DECE28C42CE400BD0334 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FC69DED028C42CE400BD0334 /* XPCExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XPCExample.entitlements; sourceTree = "<group>"; };
+		FC69DEDA28C42DFB00BD0334 /* ExampleService.xpc */ = {isa = PBXFileReference; explicitFileType = "wrapper.xpc-service"; includeInIndex = 0; path = ExampleService.xpc; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC69DEDC28C42DFB00BD0334 /* ExampleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleServiceProtocol.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FC69DEDD28C42DFC00BD0334 /* ExampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleService.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FC69DEE028C42DFC00BD0334 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		FC69DEE228C42DFC00BD0334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FC69DEC128C42CE300BD0334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC69DED728C42DFB00BD0334 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				FC69DEC628C42CE300BD0334 /* XPCExample */,
+				FC69DEDB28C42DFB00BD0334 /* ExampleService */,
 				FC69DEC528C42CE300BD0334 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				FC69DEC428C42CE300BD0334 /* XPCExample.app */,
+				FC69DEDA28C42DFB00BD0334 /* ExampleService.xpc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,17 +96,19 @@
 				FC69DEC928C42CE300BD0334 /* ContentView.swift */,
 				FC69DECB28C42CE400BD0334 /* Assets.xcassets */,
 				FC69DED028C42CE400BD0334 /* XPCExample.entitlements */,
-				FC69DECD28C42CE400BD0334 /* Preview Content */,
 			);
 			path = XPCExample;
 			sourceTree = "<group>";
 		};
-		FC69DECD28C42CE400BD0334 /* Preview Content */ = {
+		FC69DEDB28C42DFB00BD0334 /* ExampleService */ = {
 			isa = PBXGroup;
 			children = (
-				FC69DECE28C42CE400BD0334 /* Preview Assets.xcassets */,
+				FC69DEDC28C42DFB00BD0334 /* ExampleServiceProtocol.swift */,
+				FC69DEDD28C42DFC00BD0334 /* ExampleService.swift */,
+				FC69DEE028C42DFC00BD0334 /* main.swift */,
+				FC69DEE228C42DFC00BD0334 /* Info.plist */,
 			);
-			path = "Preview Content";
+			path = ExampleService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -79,15 +121,34 @@
 				FC69DEC028C42CE300BD0334 /* Sources */,
 				FC69DEC128C42CE300BD0334 /* Frameworks */,
 				FC69DEC228C42CE300BD0334 /* Resources */,
+				FC69DEE928C42DFC00BD0334 /* Embed XPC Services */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FC69DEE428C42DFC00BD0334 /* PBXTargetDependency */,
 			);
 			name = XPCExample;
 			productName = XPCExample;
 			productReference = FC69DEC428C42CE300BD0334 /* XPCExample.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FC69DED928C42DFB00BD0334 /* ExampleService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC69DEE628C42DFC00BD0334 /* Build configuration list for PBXNativeTarget "ExampleService" */;
+			buildPhases = (
+				FC69DED628C42DFB00BD0334 /* Sources */,
+				FC69DED728C42DFB00BD0334 /* Frameworks */,
+				FC69DED828C42DFB00BD0334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExampleService;
+			productName = ExampleService;
+			productReference = FC69DEDA28C42DFB00BD0334 /* ExampleService.xpc */;
+			productType = "com.apple.product-type.xpc-service";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +161,9 @@
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					FC69DEC328C42CE300BD0334 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					FC69DED928C42DFB00BD0334 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
@@ -118,6 +182,7 @@
 			projectRoot = "";
 			targets = (
 				FC69DEC328C42CE300BD0334 /* XPCExample */,
+				FC69DED928C42DFB00BD0334 /* ExampleService */,
 			);
 		};
 /* End PBXProject section */
@@ -127,8 +192,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC69DECF28C42CE400BD0334 /* Preview Assets.xcassets in Resources */,
 				FC69DECC28C42CE400BD0334 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC69DED828C42DFB00BD0334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +215,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FC69DED628C42DFB00BD0334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC69DEEA28C42F0B00BD0334 /* ExampleServiceProtocol.swift in Sources */,
+				FC69DEEB28C42F4500BD0334 /* ExampleService.swift in Sources */,
+				FC69DEE128C42DFC00BD0334 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC69DEE428C42DFC00BD0334 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC69DED928C42DFB00BD0334 /* ExampleService */;
+			targetProxy = FC69DEE328C42DFC00BD0334 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FC69DED128C42CE400BD0334 /* Debug */ = {
@@ -269,7 +358,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"XPCExample/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -294,7 +382,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"XPCExample/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -305,6 +392,44 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.17degrees.XPCExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FC69DEE728C42DFC00BD0334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExampleService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ExampleService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.17degrees.ExampleService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FC69DEE828C42DFC00BD0334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExampleService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ExampleService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.17degrees.ExampleService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -327,6 +452,15 @@
 			buildConfigurations = (
 				FC69DED428C42CE400BD0334 /* Debug */,
 				FC69DED528C42CE400BD0334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC69DEE628C42DFC00BD0334 /* Build configuration list for PBXNativeTarget "ExampleService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC69DEE728C42DFC00BD0334 /* Debug */,
+				FC69DEE828C42DFC00BD0334 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
